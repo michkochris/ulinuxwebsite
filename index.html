@@ -1,56 +1,48 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Old Introdution</title>
+<html> <head>
+<title>Introdution</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylesheets/ulinuxweb.css" type="text/css" />
-</head>
-<body>
+</head> <body>
 <div class="topnav">
   <div class="dropdown">
   <button class="dropbtn" onclick="topnavdrop()" href="/index.html">ULINUX
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-content" id="myDropdown">
-    <a href="/index.html">Ulinux</a>
-    <a href="/404.html">Custom Linux From Scratch</a>
-    <a href="/404.html">Embedded</a>
+    <a href="/index.html">About</a>
+    <a href="/404.html">News</a>
+    <a href="/404.html">Blog</a>
+    <a href="/404.html">Contact</a>
+    <a href="/404.html">Contributing</a>
   </div>
   </div>
-    <a style="float:left" href="/index.html">About</a>
-    <a style="float:left" href="/404.html">News</a>
-    <a style="float:left" href="/404.html">Blog</a>
-    <a style="float:left" href="/404.html">Contact</a>
-    <a style="float:left" href="/404.html">Contributing</a>
+    <a style="float:left" href="/index.html"></a>
+    
   <div id="myLinks">
-    <a href="/404.html">Embedded</a>
-    <a href="/404.html">LFS-Museum</a>
+    <a style="float:left" href="/404.html">BLFS</a>
+    <a style="float:left" href="/404.html">CLFS</a>
+    <a style="float:left" href="/404.html">LFS</a>
+    <a style="float:left" href="/404.html">GNU</a>
   </div>
     <a style="float:right" href="javascript:void(0);" class="icon" onclick="topnavslide()">
     <i class="fa fa-bars"></i>
-    <a style="float:right" href="/404.html">BLFS</a>
-    <a style="float:right" href="/404.html">CLFS</a>
-    <a style="float:right" href="/404.html">LFS</a>
-    <a style="float:right" href="/404.html">GNU</a>
   </a>
-</div>
-</div>
+</div> </div>
 <div class="main">
-  <h1>Welcome</h1>
+<h1>Welcome</h1>
   <ol>
   <li >Building A Linux Distribution Piece By Piece</li>
   <li >Building A Functional Cross Compiler "gcc"</li>
   <li >Cross Compiling a GNU/Linux Toolchain</li>
   </ol>
-
+<script>
+</script>
 <link rel="stylesheet" href="highlightjs/styles/qtcreator-dark.css">
 <script src="highlightjs/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
-
-<h4>001-binutils</h4>
-<h2 class="boxer">
-<pre><code class="language-bash">
+<h4>001-binutils</h4> <h2 class="boxer"> <pre><code class="language-bash">
 #!/usr/bin/env bash
 #
 #
@@ -94,17 +86,31 @@ defaultpackager
 cd $src && rm -rf binutils-$pkgver binutils-build
 cd $pkgdir && dpkg --force-all -i $fullpkgname.deb
 # end of file
-</code></pre>
-</h2>
+</code></pre></h2>
+<p>Number of times this webpage has been accessed:</p> <pc id="visitCount"></p>
 </div>
+<script>
+// Check if a visit count exists in local storage, if not initialize it to 0
+let visitCount = localStorage.getItem('visitCount');
+if (visitCount === null) {
+  visitCount = 0;
+}
+// Reset visitCount
+visitCount + 0;
+// Increment the visit count
+visitCount++;
+// Store the updated visit count in local storage
+localStorage.setItem('visitCount', visitCount);
+// Display the visit count on the page (optional)
+document.getElementById('visitCount').textContent = visitCount;
+</script>
 <div class="navbarbottom">
   <a href="http://127.0.0.1:8080/index.html">Home</a>
   <a href="#Git">Git</a>
   <a href="#Bugs">Bugs</a>
   <a href="#Donate">Donate</a>
   <a style="float:right" href="http://127.0.0.1:8080/author.html">About Author</a>
-</div>
-<script>
+</div> <script>
 function topnavdrop() {  document.getElementById("myDropdown").classList.toggle("show");
 }
 window.onclick = function(e) {
@@ -123,6 +129,4 @@ function topnavslide() {
     x.style.display = "block";
   }
 }
-</script>
-</body>
-</html>
+</script> </body> </html>
